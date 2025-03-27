@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recarregar Áudio</title>
+</head>
+<body>
+<!-- muda o audio antigo para um novo -->
+    <audio id="myAudio" controls>
+        <source id="mp3_src" src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="changeAudio()">Mudar Áudio</button>
+
+    <script>
+        function changeAudio() {
+            document.getElementById("mp3_src").src = "depois.mp3"; 
+            document.getElementById("myAudio").load();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Tempo</title>
+</head>
+<body>
+<!-- ter a posição que o audio esta e definir para um tempo especifico -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="getCurTime()">Obter Posição Atual</button>
+    <button onclick="setCurTime()">Definir para 9 Segundos</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function getCurTime() {
+            alert(audio.currentTime);
+        }
+
+        function setCurTime() {
+            audio.currentTime = 9;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade de Reprodução</title>
+</head>
+<body>
+<!-- // ve como esta a velocidade atual e coloca em reprodução lenta -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="getPlaySpeed()">Velocidade Atual</button>
+    <button onclick="setPlaySpeed()">Reprodução Lenta</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function getPlaySpeed() {
+            alert(audio.playbackRate);
+        }
+
+        function setPlaySpeed() {
+            audio.playbackRate = 0.5;
+        }
+    </script>
+
+</body>
+</html>

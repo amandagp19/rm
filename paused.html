@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Pausa</title>
+</head>
+<body>
+// 
+<!-- verifica se o audio esta pausado -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="checkPaused()">O áudio está pausado?</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function checkPaused() {
+            alert(audio.paused);
+        }
+    </script>
+
+</body>
+</html>

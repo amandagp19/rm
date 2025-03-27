@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles de Áudio</title>
+</head>
+<body>
+<!-- ele habilita e desabilita controles -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="enableControls()">Habilitar Controles</button>
+    <button onclick="disableControls()">Desabilitar Controles</button>
+    <button onclick="checkControls()">Verificar Controles</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function enableControls() {
+            audio.controls = true;
+            audio.load();
+        }
+
+        function disableControls() {
+            audio.controls = false;
+            audio.load();
+        }
+
+        function checkControls() {
+            alert(audio.controls);
+        }
+    </script>
+
+</body>
+</html>

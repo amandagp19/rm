@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Carregamento</title>
+</head>
+<body>
+<!-- indica o estado atual do carregamento do áudio -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="getReadyState()">Obter Estado</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function getReadyState() {
+            alert(audio.readyState);
+        }
+    </script>
+
+</body>
+</html>

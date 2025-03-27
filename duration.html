@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obter Duração do Áudio</title>
+</head>
+<body>
+<!-- mostra a duração do audio -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="getDuration()">Obter Duração do Áudio</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function getDuration() {
+            alert(audio.duration);
+        }
+    </script>
+
+</body>
+</html>

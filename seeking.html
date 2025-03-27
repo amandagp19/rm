@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorar Busca</title>
+</head>
+<body>
+<!-- permite verificar se o usuário está tentando avançar ou retroceder manualmente dentro da faixa de áudio -->
+    <audio id="myAudio" controls onseeking="updateSeekingStatus()" onseeked="updateSeekingStatus()">
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>Procurando no áudio: <span id="mySpan"></span></p>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function updateSeekingStatus() {
+            document.getElementById("mySpan").innerHTML = "Seeking: " + audio.seeking;
+        }
+    </script>
+
+</body>
+</html>

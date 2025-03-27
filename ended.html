@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Fim da Reprodução</title>
+</head>
+<body>
+<!-- verifica se a musica terminou -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="checkEnded()">A reprodução do áudio terminou?</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function checkEnded() {
+            alert(audio.ended ? "O áudio terminou." : "O áudio ainda está tocando.");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mute Controle</title>
+</head>
+<body>
+<!-- deixa o audio silencioso, ativa o som e verifica se esta mudo -->
+    <audio id="myAudio" controls>
+        <source src="ainda bem.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="enableMute()">Silenciar</button>
+    <button onclick="disableMute()">Ativar Som</button>
+    <button onclick="checkMute()">Verificar Mudo</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function enableMute() {
+            audio.muted = true;
+        }
+
+        function disableMute() {
+            audio.muted = false;
+        }
+
+        function checkMute() {
+            alert(audio.muted);
+        }
+    </script>
+
+</body>
+</html>
